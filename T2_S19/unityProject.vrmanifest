@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.t2_s19.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\josep\\Documents\\T2_VGDA_S19\\T2_S19\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "T2_S19 [Testing]"
+        }
+      }
+    }
+  ]
+}
