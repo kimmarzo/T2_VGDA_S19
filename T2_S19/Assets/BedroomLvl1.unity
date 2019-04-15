@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -2185,15 +2185,15 @@ Transform:
   - {fileID: 1243520249}
   - {fileID: 1545013459}
   - {fileID: 841468263}
-  - {fileID: 268398011230952330}
   - {fileID: 697601462}
+  - {fileID: 268398011230952330}
+  - {fileID: 587328937}
   - {fileID: 430393975}
   - {fileID: 1120753234}
   - {fileID: 437895766}
   - {fileID: 222136596}
   - {fileID: 2082533772}
   - {fileID: 1967462784}
-  - {fileID: 587328937}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4027,7 +4027,7 @@ Transform:
   - {fileID: 989273899}
   - {fileID: 1348224874}
   m_Father: {fileID: 388128096}
-  m_RootOrder: 19
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620099387 stripped
 GameObject:
@@ -4258,7 +4258,7 @@ Transform:
   - {fileID: 1865228832}
   - {fileID: 1938302761}
   m_Father: {fileID: 388128096}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714340302
 GameObject:
