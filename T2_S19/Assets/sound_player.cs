@@ -13,13 +13,14 @@ public class sound_player : MonoBehaviour
     {
         
         initialPos = player.GetComponent<Transform>().position;
+    
     }
 
     // Update is called once per frame
     void Update()
     {
         finalPos = player.GetComponent<Transform>().position;
-  
+        gameObject.GetComponent<Transform>().position = finalPos;
 
         if (initialPos.x != finalPos.x && walking_source.isPlaying == false)
         {
