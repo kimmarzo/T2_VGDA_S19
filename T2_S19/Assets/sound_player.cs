@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class sound_player : MonoBehaviour
 {
-    AudioSource walking_source;
-    AudioClip walking_clip;
+    public AudioSource walking_source;
     Vector3 initialPos;
     Vector3 finalPos;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        walking_source = gameObject.GetComponent<AudioSource>();
-        initialPos = gameObject.transform.localPosition;
+        
+        initialPos = player.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        finalPos = gameObject.transform.localPosition;
+        finalPos = player.transform.localPosition;
   
 
         if (initialPos.x != finalPos.x && walking_source.isPlaying == false)
