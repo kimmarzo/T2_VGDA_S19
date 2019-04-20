@@ -7,40 +7,26 @@ public class sound_player : MonoBehaviour
     public AudioSource walking_source;
     Vector3 initialPos;
     Vector3 finalPos;
-    public GameObject player;
+    Vector3 difference;
     // Start is called before the first frame update
     void Start()
     {
         
-        initialPos = player.GetComponent<Transform>().position;
+        initialPos = GetComponent<Transform>().position;
     
     }
 
     // Update is called once per frame
     void Update()
     {
-        finalPos = player.GetComponent<Transform>().position;
-        gameObject.GetComponent<Transform>().position = finalPos;
+        finalPos = GetComponent<Transform>().position;
+        difference = finalPos - initialPos;
 
-        if (initialPos.x != finalPos.x && walking_source.isPlaying == false)
+        if (difference.magnitude > 1.0f && walking_source.isPlaying == false)
         {
             walking_source.Play();
             initialPos = finalPos;
         }
 
-        if (initialPos.y != finalPos.y && walking_source.isPlaying == false)
-        {
-            walking_source.Play();
-            initialPos = finalPos;
-
-        }
-
-        if (initialPos.z != finalPos.z && walking_source.isPlaying == false)
-        {
-            walking_source.Play();
-            initialPos = finalPos;
-        }
     }
-
- 
 }
