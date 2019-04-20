@@ -11,31 +11,38 @@ public class AreaDetectAI : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Player")
+        { 
         AI.GetComponent<EntityAI>().enabled = true;
         isInside = true;
-        
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        AI.GetComponent<EntityAI>().enabled = false;
-        isInside = false;
-        playerHealth = 100;
+        if (other.gameObject.tag == "Player")
+        {
+            AI.GetComponent<EntityAI>().enabled = false;
+            isInside = false;
+            playerHealth = 100;
+        }
+        
     }
 
-    void Update()
-    {
-        if (isInside == true)
-        {
+    //void Update()
+    //{
+    //    if (isInside == true)
+    //    {
             
-            Debug.LogFormat("playerHealth = {0}", playerHealth);
-            playerHealth -= 1;
-        }
+    //        Debug.LogFormat("playerHealth = {0}", playerHealth);
+    //        playerHealth -= 1;
+    //    }
 
-        if (playerHealth < 0)
-        {
-            Debug.Log("U DEAD DOE");
+    //    if (playerHealth < 0)
+    //    {
+    //        Debug.Log("U DEAD DOE");
             
-        }
-    }
+    //    }
+    //}
 }
