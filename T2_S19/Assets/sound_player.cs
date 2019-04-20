@@ -8,6 +8,7 @@ public class sound_player : MonoBehaviour
     Vector3 initialPos;
     Vector3 finalPos;
     Vector3 difference;
+    public float walkingPace = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class sound_player : MonoBehaviour
         finalPos = GetComponent<Transform>().position;
         difference = finalPos - initialPos;
 
-        if (difference.magnitude > 1.0f && walking_source.isPlaying == false)
+        if (difference.magnitude > walkingPace && walking_source.isPlaying == false)
         {
             walking_source.Play();
             initialPos = finalPos;
