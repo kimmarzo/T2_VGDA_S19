@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class RandomBackground : MonoBehaviour
 {
-    public AudioSource background_1;
-    public AudioSource background_2;
-    public AudioSource background_3;
+    AudioSource[] audioArray;
     private int currentMusic;
     private float randomTime;
     private float timeCounter; 
     // Start is called before the first frame update
     void Start()
     {
+        audioArray = GetComponents<AudioSource>();
         currentMusic = 0;
         randomTime = 120.0f;
         timeCounter = 0.0f;
@@ -37,17 +36,17 @@ public class RandomBackground : MonoBehaviour
 
         if (currentMusic == 1)
         {
-            background_1.Play();
+            audioArray[1].Play();
             Debug.Log("Played 1");
         }
         else if (currentMusic == 2)
         {
-            background_2.Play();
+            audioArray[2].Play();
             Debug.Log("played 2");
         }
         else if (currentMusic == 3)
         {
-            background_3.Play();
+            audioArray[3].Play();
             Debug.Log("Played 3");
         }
     }
