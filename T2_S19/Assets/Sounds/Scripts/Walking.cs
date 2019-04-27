@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sound_player : MonoBehaviour
+public class Walking : MonoBehaviour
 {
     public AudioSource walking_source;
     Vector3 initialPos;
