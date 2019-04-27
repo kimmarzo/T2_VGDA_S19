@@ -39,9 +39,11 @@ public class VRTouchpadMove : MonoBehaviour
             {
                 rig.position += (transform.right * axis.x + transform.forward * axis.y) * Time.deltaTime * playerWalkSpeed;
                 rig.position = new Vector3(rig.position.x, 0, rig.position.z);
-                Debug.Log("Transforming position");
+                
             }
         }
+
+
 
     }
 }
