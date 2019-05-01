@@ -37,6 +37,7 @@ public class Creaks : MonoBehaviour
         {
             steppedOn = 1;
             creak_sound.Play();
+            Debug.Log("Played creak");
         }
     }
 
