@@ -10,7 +10,7 @@ public class entityDetect : MonoBehaviour
     {
         if (other.gameObject.tag == "Entity")
         {
-            gameObject.SetActive(false);
+            
         }
 
     }
