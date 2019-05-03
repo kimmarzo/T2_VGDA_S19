@@ -7,6 +7,7 @@ public class flashlightToggle : MonoBehaviour
 {
     public VRTK.VRTK_ControllerEvents controllerEvents;
     public GameObject flashlight;
+    public GameObject entityLight;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +22,13 @@ public class flashlightToggle : MonoBehaviour
         {
          
             flashlight.GetComponent<Light>().enabled = true;
+            entityLight.SetActive(true);
 
         }
         else
         {
             flashlight.GetComponent<Light>().enabled = false;
-     
+            entityLight.SetActive(false);
         }
 
     }
