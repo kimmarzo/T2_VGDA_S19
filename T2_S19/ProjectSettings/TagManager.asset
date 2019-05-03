@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Shootable
+  - projectile
+  - Entity
+  - flashlightPoint
   layers:
   - Default
   - TransparentFX
@@ -14,9 +16,9 @@ TagManager:
   - UI
   - 
   - 
-  - Lighting
-  - Ground
-  - Postprocessing
+  - PostProcessing
+  - 
+  - 
   - 
   - 
   - 
@@ -39,9 +41,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Fire
-    uniqueID: 3804908061
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
