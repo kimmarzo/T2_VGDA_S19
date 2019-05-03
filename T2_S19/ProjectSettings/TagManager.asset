@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - projectile
+  - Entity
+  - flashlightPoint
   layers:
   - Default
   - TransparentFX

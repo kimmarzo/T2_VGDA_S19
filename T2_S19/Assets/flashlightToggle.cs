@@ -21,10 +21,12 @@ public class flashlightToggle : MonoBehaviour
         {
          
             flashlight.GetComponent<Light>().enabled = true;
+
         }
         else
         {
             flashlight.GetComponent<Light>().enabled = false;
+     
         }
 
     }
