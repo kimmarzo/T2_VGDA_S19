@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using UnityEngine.SceneManagement;
 
 public class flashlightToggle : MonoBehaviour
 {
     public VRTK.VRTK_ControllerEvents controllerEvents;
     public GameObject flashlight;
     public GameObject entityLight;
-
+    public float triggerTimes = 0;
     public bool flashlightisOn = false;
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,13 @@ public class flashlightToggle : MonoBehaviour
     void Update()
     {
         
-        if (controllerEvents.triggerClicked)
+        if (controllerEvents.triggerPressed)
         {
          
             flashlight.GetComponent<Light>().enabled = true;
             entityLight.SetActive(true);
             flashlightisOn = true;
-
+            triggerTimes += 1;
         }
         else
         {
@@ -35,5 +36,11 @@ public class flashlightToggle : MonoBehaviour
             flashlightisOn = false;
         }
 
+        if (120 <= triggerTimes)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
+
+
 }
