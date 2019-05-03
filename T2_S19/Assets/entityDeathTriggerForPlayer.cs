@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class entityDeathTrigger : MonoBehaviour
+public class entityDeathTriggerForPlayer : MonoBehaviour
 {
 
     private bool isInsideDeath = false;
-    public GameObject parentEntity;
+
     private void OnTriggerEnter(Collider other)
     {
- 
-        if (other.gameObject.tag == "flashlightPoint")
+        if (other.gameObject.tag == "Player")
         {
-            Destroy(parentEntity);
+            SceneManager.LoadScene(0);
         }
+
 
     }
 
