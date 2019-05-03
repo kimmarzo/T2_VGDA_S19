@@ -7,10 +7,10 @@ public class entityAppear : MonoBehaviour
     public GameObject flashlightChecker;
     public GameObject entity;
     public bool entityisOn = true;
-    private void OnTriggerEnter(Collider other)
-    {
 
-        if ((other.gameObject.tag == "Entity") == false &&  (flashlightChecker.GetComponent<flashlightToggle>().flashlightisOn == true))
+    private void Update()
+    {
+        if ((flashlightChecker.GetComponent<flashlightToggle>().flashlightisOn == true))
         {
             entity.SetActive(false);
         }
@@ -18,6 +18,15 @@ public class entityAppear : MonoBehaviour
         {
             entity.SetActive(true);
         }
-
     }
+    //private void OnTriggerEnter(Collider other)
+    //{
+
+    //    if ((other.gameObject.tag == "Entity") == false)
+    //    {
+            
+    //    }
+ 
+
+    //}
 }
